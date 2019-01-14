@@ -32,7 +32,8 @@
       <!-- Container -->
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation"
+            aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -115,19 +116,20 @@
       <section class="products-section">
         <h2 class="products-title">Dobro došli u našu prodavnicu.</h2>
         <p>
-          Ovaj template je pravljen za kurseve Krojačeve škole. <br> Možete ga koristiti za vežbanje i učenje, nije namenjen za komercijalnu upotrebu i spada u vlasništvo Krojačeve škole.
+          Ovaj template je pravljen za kurseve Krojačeve škole. <br> Možete ga koristiti za vežbanje i učenje, nije
+          namenjen za komercijalnu upotrebu i spada u vlasništvo Krojačeve škole.
         </p>
         <!-- Collections Holder -->
         <div class="collections-holder">
           <div class="row">
             <div class="col-md-6">
-              <a href="#" class="frame">
+              <a href="#" class="frame" data-col="female">
                 <img src="img/female-products.jpg" alt="Female productus" class="img-responsive">
                 <span>Ženska kolekcija</span>
               </a>
             </div>
             <div class="col-md-6">
-              <a href="#" class="frame">
+              <a href="#" class="frame" data-col="male">
                 <img src="img/male-products.jpg" alt="Male productus" class="img-responsive">
                 <span>Muška kolekcija</span>
               </a>
@@ -140,19 +142,27 @@
         <div class="products-holder">
           <!-- Products Categories -->
           <ul class="list-reset clearfix products-categories">
-            <li><a href="#" class="active">Nova kolekcija</a></li>
-            <li><a href="#">Popularno</a></li>
-            <li><a href="#">Akcija</a></li>
+            <li><a href="#" data-col="newCol" class="active">Nova kolekcija</a></li>
+            <li><a href="#" data-col="popular">Popularno</a></li>
+            <li><a href="#" data-col="action">Akcija</a></li>
           </ul>
           <!-- Products Categories END -->
-          <div class="row">
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
+          <div class="row" id="insertTemplate">
+
+
+
+
+
+
+
+
+
+            <script type="template">
+              <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
               <article class="product clearfix">
                 <!-- Image Holder -->
                 <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product1.jpg" alt="1" class="img-responsive">
-                  </a>
+                  <img src="img/products/{{imgSRC}}.jpg" alt="1" class="img-responsive">
                   <ul class="hover-list list-reset">
                     <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
                     <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
@@ -162,8 +172,8 @@
                 <!-- Image Holder END -->
                 <!-- Product Title -->
                 <div class="product-title clearfix">
-                  <h3>Ženska majica <span>Cosmos</span></h3>
-                  <span>3.500 rsd</span>
+                  <h3>{{productTitle}} <span>{{model}}</span></h3>
+                  <span>{{price}} rsd</span>
                 </div>
                 <!-- Product Title END -->
                 <!-- Color Picker -->
@@ -175,441 +185,13 @@
                 <!-- Color Picker END -->
               </article>
             </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product12.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Muška majica <span>Legendary</span></h3>
-                  <span>4.500 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="dark-gray">Dark gray</a></li>
-                  <li><a href="#" class="purple">Purple</a></li>
-                  <li><a href="#" class="green">Green</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product2.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženski duks <span>X style</span></h3>
-                  <span>6.000 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="orange">Orange</a></li>
-                  <li><a href="#" class="black">Black</a></li>
-                  <li><a href="#" class="red">Red</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product13.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Muški duks <span>Frogster</span></h3>
-                  <span>4.500 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="yellow">Yellow</a></li>
-                  <li><a href="#" class="dark-gray">Dark gray</a></li>
-                  <li><a href="#" class="blue">Blue</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product3.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženski džemper <span>X style</span></h3>
-                  <span>6.500 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="purple">Purple</a></li>
-                  <li><a href="#" class="green">Green</a></li>
-                  <li><a href="#" class="dark-gray">Dark grey</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product14.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Muška jakna <span>V style</span></h3>
-                  <span>12.000 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="green">Green</a></li>
-                  <li><a href="#" class="dark-gray">Dark gray</a></li>
-                  <li><a href="#" class="black">Black</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product4.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženska bluza <span>Cosmos</span></h3>
-                  <span>5.500 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="yellow">Yellow</a></li>
-                  <li><a href="#" class="beige">Beige</a></li>
-                  <li><a href="#" class="aqua">Aqua</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product15.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Muški duks <span>North west</span></h3>
-                  <span>4.880 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="blue">Blue</a></li>
-                  <li><a href="#" class="black">Black</a></li>
-                  <li><a href="#" class="dark-gray">Dark grey</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product5.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženska bluza <span>North west</span></h3>
-                  <span>11.880 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="dark-gray">Dark gray</a></li>
-                  <li><a href="#" class="green">Green</a></li>
-                  <li><a href="#" class="purple">Purple</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product16.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Muški prsluk <span>North west</span></h3>
-                  <span>4.880 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="black">Black</a></li>
-                  <li><a href="#" class="dark-gray">Dark gray</a></li>
-                  <li><a href="#" class="purple">Purple</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product6.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženska bluza <span>North west</span></h3>
-                  <span>4.280 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="purple">Purple</a></li>
-                  <li><a href="#" class="red">Red</a></li>
-                  <li><a href="#" class="yellow">Yellow</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product7.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženski duks <span>North west</span></h3>
-                  <span>5.880 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="dark-gray">Dark-gray</a></li>
-                  <li><a href="#" class="purple">Purple</a></li>
-                  <li><a href="#" class="green">Green</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product8.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženska majica <span>North west</span></h3>
-                  <span>8.880 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="aqua">Aqua</a></li>
-                  <li><a href="#" class="red">Red</a></li>
-                  <li><a href="#" class="beige">Beige</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product9.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženska majica <span>North west</span></h3>
-                  <span>1.990 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="dark-gray">Dark gray</a></li>
-                  <li><a href="#" class="purple">Purple</a></li>
-                  <li><a href="#" class="green">Green</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product10.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženska bluza <span>North west</span></h3>
-                  <span>4.880 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="purple">Purple</a></li>
-                  <li><a href="#" class="green">Green</a></li>
-                  <li><a href="#" class="dark-gray">Dark-grey</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
-            <div class="col-xs-6 col-md-4 col-lg-3 article-clear">
-              <article class="product clearfix">
-                <!-- Image Holder -->
-                <div class="product-img-holder">
-                  <a href="#">
-                    <img src="img/products/product11.jpg" alt="1" class="img-responsive">
-                  </a>
-                  <ul class="hover-list list-reset">
-                    <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                    <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                    <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                  </ul>
-                </div>
-                <!-- Image Holder END -->
-                <!-- Product Title -->
-                <div class="product-title clearfix">
-                  <h3>Ženska košulja <span>North west</span></h3>
-                  <span>2.100 rsd</span>
-                </div>
-                <!-- Product Title END -->
-                <!-- Color Picker -->
-                <ul class="color-picker list-reset">
-                  <li><a href="#" class="blue">Blue</a></li>
-                  <li><a href="#" class="purple">Purple</a></li>
-                  <li><a href="#" class="black">Black</a></li>
-                </ul>
-                <!-- Color Picker END -->
-              </article>
-            </div>
+</script>
+
+
+
+
+
+
           </div>
         </div>
         <!-- Products Holder END -->
@@ -627,10 +209,11 @@
           <!-- Info -->
           <div class="col-sm-3">
             <h3>Shop</h3>
-            <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+              tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
             <p><a href="mailto:info@krojacevaskola.com">info@krojacevaskola.com</a> <br>
-               <a href="tel:+381 11 555 55 555">+381 11 555 55 555</a> <br>
-               Nikolaja Ostrovskog 3, Zemun, Srbija
+              <a href="tel:+381 11 555 55 555">+381 11 555 55 555</a> <br>
+              Nikolaja Ostrovskog 3, Zemun, Srbija
             </p>
           </div>
           <!-- Info END -->
@@ -692,6 +275,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/functions.js"></script>
   <script src="js/main.js"></script>
 </body>
 

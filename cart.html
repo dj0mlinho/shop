@@ -139,20 +139,19 @@
             <article class="product clearfix">
               <!-- Image Holder -->
               <div class="product-img-holder">
-
-                  <img src="img/products/{{imgSrc}}.jpg" alt="1" class="img-responsive">
-
-                <ul class="hover-list list-reset">
-                  <li><a href="#"><img src="img/shop-icon.png" alt="Shop icon"></a></li>
-                  <li><a href="#"><img src="img/view-icon.png" alt="View icon"></a></li>
-                  <li><a href="#"><img src="img/like-icon.png" alt="Like icon"></a></li>
-                </ul>
+                <a href="#">
+                  <img src="img/products/{{imgSrc}}.jpg" alt="1" class="img-responsive imgSrc">
+                </a>
               </div>
               <!-- Image Holder END -->
               <!-- Product Title -->
               <div class="product-title clearfix">
                 <h3>{{productTitle}} <span>{{model}}</span></h3>
                 <span>{{price}} rsd</span>
+              </div>
+              <div>
+                <button type="button" class="btn btn-secondary form-control">Količina: <span class="number"></span></button>
+                <button type="button" class="remove btn btn-danger form-control">Izbaci proizvod iz korpe</button>
               </div>
               <!-- Product Title END -->
             </article>
@@ -239,7 +238,7 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/functions.js"></script>
-  <script src="js/detailed.js"></script>
+  <script src="js/cart.js"></script>
 </body>
 
 </html>
