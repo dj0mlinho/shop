@@ -1,5 +1,7 @@
 let db;
 let template = $('[type="template"]').html();
+let aCart = document.querySelector('.cart');
+setQuantity()
 
 
 $.ajax({
@@ -12,9 +14,11 @@ $.ajax({
   $("#insertTemplate").html(text);
 
   $('.view').on('click', showDetailedPage)
+  $('.shop').on('click', addToCartInstant)
   //FILTER CATEGORIES
 
   $('[data-col]').on("click", selectCategory);
+
 
   function selectCategory(e) {
 
@@ -28,6 +32,8 @@ $.ajax({
       let text = render(colection)
       $("#insertTemplate").html(text);
       $('.view').on('click', showDetailedPage)
+      $('.shop').on('click', addToCartInstant)
+
     } else {
       colection = db.filter(function (e) {
         return e[col];
@@ -38,6 +44,7 @@ $.ajax({
       let text = render(colection)
       $("#insertTemplate").html(text);
       $('.view').on('click', showDetailedPage)
+      $('.shop').on('click', addToCartInstant)
     }
   }
   //open detailed page
