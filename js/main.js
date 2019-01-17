@@ -1,38 +1,46 @@
+let db;
 let template = $('[type="template"]').html();
-let dataBase;
 
 
 $.ajax({
   url: "https://raw.githubusercontent.com/Danilovesovic/shop/master/shop.json",
   dataType: "json"
 }).done(function (res) {
-  dataBase = res;
+  db = res;
   //RENDER INDEX HTML
-  render(dataBase, "#insertTemplate")
+  let text = render(db)
+  $("#insertTemplate").html(text);
 
-
+  $('.view').on('click', showDetailedPage)
   //FILTER CATEGORIES
-  $("a").on("click", selectCategory);
 
+  $('[data-col]').on("click", selectCategory);
 
-  function selectCategory() {
+  function selectCategory(e) {
+
     event.preventDefault()
     let col = $(this).attr("data-col");
     let colection;
     if (col == "male" || col == "female") {
-      colection = dataBase.filter(function (e) {
+      colection = db.filter(function (e) {
         return e.colection == col;
       });
-      render(colection, "#insertTemplate")
+      let text = render(colection)
+      $("#insertTemplate").html(text);
+      $('.view').on('click', showDetailedPage)
     } else {
-      colection = dataBase.filter(function (e) {
+      colection = db.filter(function (e) {
         return e[col];
       });
       $('a').removeClass("active");
       $(this).addClass("active");
       render(colection, "#insertTemplate")
+      let text = render(colection)
+      $("#insertTemplate").html(text);
+      $('.view').on('click', showDetailedPage)
     }
   }
+  //open detailed page
 
 });
 
