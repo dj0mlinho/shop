@@ -15,6 +15,8 @@ $.ajax({
 
   $('.view').on('click', showDetailedPage)
   $('.shop').on('click', addToCartInstant)
+  //go to cart page
+  $('.cart').on('click', showCartPage)
   //FILTER CATEGORIES
 
   $('[data-col]').on("click", selectCategory);
@@ -47,7 +49,6 @@ $.ajax({
       $('.shop').on('click', addToCartInstant)
     }
   }
-  //open detailed page
 
 });
 

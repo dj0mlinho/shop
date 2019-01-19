@@ -48,6 +48,8 @@ $.ajax({
   $('.back').on('click', function () {
     $(this).attr('href', 'index.html');
   })
+  //go to cart page
+  $('.cart').on('click', showCartPage)
 
 })
 
@@ -84,3 +86,14 @@ function addToCart(e) {
   setQuantity()
 
 }
+
+
+
+//BOJANOV FRONT
+$(".back-to-top").click(function () {
+  $("html, body").animate({
+      scrollTop: 0
+    },
+    1000
+  );
+});
